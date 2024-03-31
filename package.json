@@ -1,6 +1,6 @@
 {
   "name": "@basha_coder/calculator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An advanced calculator",
   "main": "src/index.js",
   "scripts": {
@@ -20,10 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bashamega/claculator/issues.git"
+    "url": "git+https://github.com/Bashamega/calculator/issues.git"
   },
   "bugs": {
-    "url": "https://github.com/Bashamega/claculator/issues"
+    "url": "https://github.com/Bashamega/calculator/issues"
   },
-  "homepage": "https://github.com/Bashamega/claculator/issues"
+  "homepage": "https://github.com/Bashamega/calculator/issues"
 }

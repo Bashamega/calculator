@@ -18,7 +18,11 @@ Welcome to Calculator! This lightweight and flexible npm package provides a suit
 You can install Calculator via npm:
 
 ```bash
-npm install calculator
+npm i @basha_coder/calculator
+```
+Or using cdn:
+```
+<script src="https://cdn.jsdelivr.net/gh/bashamega/calculator/src/index.js"></script>
 ```
 
 ## Usage
