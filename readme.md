@@ -28,7 +28,7 @@ Or using cdn:
 ## Usage
 
 ```javascript
-const { add, subtract, multiply, divide, gcd, calculatePercentage, decimalToPercent, roundUp, BMI, rounded_BMI } = require('calculator');
+const { add, subtract, multiply, divide, gcd, calculatePercentage, decimalToPercent, roundUp, BMI, rounded_BMI } = require('@basha_coder/calculator');
 
 console.log(add(5, 3)); // 8
 console.log(subtract(10, 4)); // 6
