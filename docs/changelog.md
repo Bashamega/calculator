@@ -11,3 +11,6 @@
 *Version 1.0.2 - April 1, 2024*
 - Added a readme file
 
+*Version 1.0.3 - April 2, 2024*
+- Added more functionalities for conversion
+

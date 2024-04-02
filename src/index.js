@@ -73,14 +73,14 @@ function decimalToPercent(decimal) {
     if (typeof decimal !== 'number') {
         throw new Error('Input must be a number');
     }
-    return decimal * 100;
+    return multiply(decimal,100);
 }
 
 function calculatePercentage(part, whole) {
     if (typeof part !== 'number' || typeof whole !== 'number') {
         throw new Error('Both parameters must be numbers');
     }
-    return (part / whole) * 100;
+    return multiply( divide(part, whole), 100);
 }
 
 function roundUp(number) {
@@ -95,7 +95,7 @@ function BMI(weight, height) {
         throw new Error('Both weight and height must be numbers');
     }
     let heightInMeters = height / 100;
-    return weight / (heightInMeters * heightInMeters);
+    return divide(weight, multiply(heightInMeters, heightInMeters));
 }
 
 function rounded_BMI(weight, height) {
@@ -103,10 +103,100 @@ function rounded_BMI(weight, height) {
         throw new Error('Both weight and height must be numbers');
     }
     let heightInMeters = height / 100;
-    let bmi = weight / (heightInMeters * heightInMeters);
+    let bmi = divide(weight, multiply(heightInMeters, heightInMeters));
     return roundUp(bmi);
 }
+//Converter
+function convertLength(value, fromUnit, toUnit) {
+    const units = {
+        'cm': 1,
+        'inch': 2.54,
+        'm': 100,
+        'ft': 30.48,
+        'km': 100000,
+        'mile': 160934.4,
+        'yard': 91.44
+    };
 
+    if (typeof value !== 'number') {
+        throw new Error('Input must be a number');
+    }
+
+    if (!(fromUnit in units) || !(toUnit in units)) {
+        throw new Error('Invalid units');
+    }
+
+    return multiply(value, divide(units[fromUnit], units[toUnit]));
+}
+function cmToInch(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return divide(measurement,2.54);
+}
+
+function inchToCm(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return multiply(measurement,2.54);
+}
+
+function mToFeet(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return multiply(measurement,3.28084);
+}
+
+function feetToM(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return divide(measurement,3.28084);
+}
+
+function kmToMile(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return divide(measurement,1.60934);
+}
+
+function mileToKm(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return multiply(measurement, 1.60934);
+}
+
+function mToYard(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return multiply(measurement, 1.09361);
+}
+
+function yardToM(measurement) {
+    if (typeof measurement !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    return divide(measurement, 1.09361);
+}
+function celsiusToFahrenheit(cel){
+    if (typeof cel !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    
+    return add(multiply(cel, 1.8), 32)
+}
+function fahrenheitToCelsius(f){
+    if (typeof f !== 'number') {
+        throw new Error('Input must be a number');
+    }
+    
+    return divide(subtract(f, 32), 1.79999999)
+}
 module.exports = {
     add,
     subtract,
@@ -117,5 +207,16 @@ module.exports = {
     decimalToPercent,
     roundUp,
     BMI,
-    rounded_BMI
+    rounded_BMI,
+    convertLength,
+    cmToInch,
+    inchToCm,
+    mToFeet,
+    mToYard,
+    mileToKm,
+    feetToM,
+    yardToM,
+    kmToMile,
+    celsiusToFahrenheit,
+    fahrenheitToCelsius
 };

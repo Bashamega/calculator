@@ -1,6 +1,6 @@
 {
   "name": "@basha_coder/calculator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An advanced calculator",
   "main": "src/index.js",
   "scripts": {
@@ -25,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/Bashamega/calculator/issues"
   },
-  "homepage": "https://github.com/Bashamega/calculator/issues"
+  "homepage": "https://bashamega.github.io/calculator/"
 }
