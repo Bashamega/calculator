@@ -1,4 +1,4 @@
-# add Function
+# Addition
 
 ## About
 The `add` function takes two numbers as input and returns their sum.
